@@ -1,0 +1,22 @@
+$fs-home: "0.875rem";
+$fs-detail: "1rem";
+
+.light {
+  --elements-bg: hsl(0, 0%, 100%);
+  --bg-clr: hsl(0, 0%, 98%);
+  --text-clr: hsl(200, 15%, 8%);
+  --input-clr: hsl(0, 0%, 52%);
+  --box-shadow: hsl(0, 0%, 80%);
+
+  transition: all 0.7s ease-in-out;
+}
+
+.dark {
+  --elements-bg: hsl(209, 23%, 22%);
+  --bg-clr: hsl(207, 26%, 17%);
+  --text-clr: hsl(0, 0%, 100%);
+  --input-clr: hsl(0, 0%, 52%);
+  --box-shadow: hsl(0, 0%, 14%);
+
+  transition: all 0.7s ease-in-out;
+}
