@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/React-REST-Countries-API/static/css/main.5d3f756e.css",
+    "main.js": "/React-REST-Countries-API/static/js/main.01cc5b9f.js",
+    "static/js/486.705da864.chunk.js": "/React-REST-Countries-API/static/js/486.705da864.chunk.js",
+    "static/js/911.2c331516.chunk.js": "/React-REST-Countries-API/static/js/911.2c331516.chunk.js",
+    "static/js/764.cf055aea.chunk.js": "/React-REST-Countries-API/static/js/764.cf055aea.chunk.js",
+    "index.html": "/React-REST-Countries-API/index.html",
+    "main.5d3f756e.css.map": "/React-REST-Countries-API/static/css/main.5d3f756e.css.map",
+    "main.01cc5b9f.js.map": "/React-REST-Countries-API/static/js/main.01cc5b9f.js.map",
+    "486.705da864.chunk.js.map": "/React-REST-Countries-API/static/js/486.705da864.chunk.js.map",
+    "911.2c331516.chunk.js.map": "/React-REST-Countries-API/static/js/911.2c331516.chunk.js.map",
+    "764.cf055aea.chunk.js.map": "/React-REST-Countries-API/static/js/764.cf055aea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d3f756e.css",
+    "static/js/main.01cc5b9f.js"
+  ]
+}
