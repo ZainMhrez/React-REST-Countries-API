@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./Styles/main.scss";
 // import Pages
 import DetailsPage from "./Pages/DetailsPage";
@@ -16,14 +16,14 @@ const App = () => {
     <CountriesContextProvider>
       <ThemeContextProvider>
         <Header />
-        <BrowserRouter>
+        <HashRouter>
           <Suspense fallback={<Loader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path=":name" element={<DetailsPage />} />
             </Routes>
           </Suspense>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeContextProvider>
     </CountriesContextProvider>
   );
