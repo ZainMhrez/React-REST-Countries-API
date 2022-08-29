@@ -53,37 +53,37 @@ const CountryDetails = () => {
       <div className="text-details">
         <h2>{countryDetails[0].name.common}</h2>
         <div className="text-details-container">
-          <div className="section-1">
-            <p>
+          <ul className="section-1">
+            <li>
               <strong>Native Name:</strong>{" "}
               {countryDetails[0].name.nativeName[nativeNameKey].common}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Population:</strong>{" "}
               {numberWithCommas(countryDetails[0].population)}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Region:</strong> {countryDetails[0].region}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Sub Region:</strong> {countryDetails[0].subregion}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Capital:</strong> {countryDetails[0].capital}
-            </p>
-          </div>
-          <div className="section-2">
-            <p>
+            </li>
+          </ul>
+          <ul className="section-2">
+            <li>
               <strong>Top Level Domain:</strong> {countryDetails[0].tld}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Currencies:</strong>{" "}
               {countryDetails[0].currencies[currenciesKey].name}
-            </p>
-            <p>
+            </li>
+            <li>
               <strong>Languages:</strong> {getLanguages}
-            </p>
-          </div>
+            </li>
+          </ul>
 
           <div className="border-countries">
             <strong>Border Countries: </strong>

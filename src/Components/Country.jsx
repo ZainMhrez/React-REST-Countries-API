@@ -11,7 +11,7 @@ const Country = ({ data }) => {
   // function to navigate to the country's detail page based on the the clicked country
   const handleNavigate = (name) => {
     fetchCountryDetails(name);
-    navigate(`/${name}`, { replace: true });
+    navigate(`/${name}`);
   };
 
   function numberWithCommas(num) {
@@ -19,37 +19,35 @@ const Country = ({ data }) => {
   }
 
   return (
-    <motion.div
+    <motion.article
       layout
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      exit={{ opacity: 0, scale: 0 }}
       className="country-box"
     >
-      <div className="img-container">
-        <img
-          src={`https://flagcdn.com/w320/${data.cca2.toLowerCase()}.webp`}
-          alt={data.name.common}
-          onClick={() => handleNavigate(data.name.common)}
-        />
-      </div>
+      <img
+        src={`https://flagcdn.com/${data.cca2.toLowerCase()}.svg`}
+        alt={data.name.common}
+        onClick={() => handleNavigate(data.name.common)}
+      />
       <div className="text-container">
         <h3 tabIndex="0" onClick={() => handleNavigate(data.name.common)}>
           {data.name.common}
         </h3>
-        <div className="country-box-details">
-          <p>
+        <ul className="country-box-details">
+          <li>
             <strong>Population:</strong> {numberWithCommas(data.population)}
-          </p>
-          <p>
+          </li>
+          <li>
             <strong>Region:</strong> {data.region}
-          </p>
-          <p>
+          </li>
+          <li>
             <strong>Capital:</strong> {data.capital}
-          </p>
-        </div>
+          </li>
+        </ul>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

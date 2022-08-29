@@ -112,13 +112,11 @@
         box-shadow: 0 0 10px var(--box-shadow);
         border-radius: 5px;
 
-        .img-container {
+        img {
           width: 100%;
-          img {
-            width: 100%;
-            height: 200px;
-            cursor: pointer;
-          }
+          object-fit: cover;
+          aspect-ratio: 3/2;
+          cursor: pointer;
         }
 
         .text-container {
@@ -132,7 +130,7 @@
           .country-box-details {
             margin-top: 1rem;
 
-            p {
+            li {
               font-size: 0.875rem;
               font-weight: 300;
 
