@@ -43,7 +43,7 @@ export const CountriesContextProvider = ({ children }) => {
   };
 
   // Get Country Details based on the country name
-  const fetchCountryDetails = /* async */ (country) => {
+  const fetchCountryDetails = (country) => {
     const name = allCountries.filter((d) => d.name.common === country);
     setCountryDetails([...name]);
   };

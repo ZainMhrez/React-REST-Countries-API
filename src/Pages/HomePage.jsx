@@ -14,9 +14,13 @@ const HomePage = () => {
         <OptionsSection />
         <motion.div layout className="countries-box">
           <AnimatePresence>
-            {displayedCountries?.map((country) => {
-              return <Country key={country.cca2} data={country} />;
-            })}
+            {displayedCountries?.length === 0 ? (
+              <h2>No Countries Found...</h2>
+            ) : (
+              displayedCountries?.map((country) => {
+                return <Country key={country.cca2} data={country} />;
+              })
+            )}
           </AnimatePresence>
         </motion.div>
       </div>

@@ -119,28 +119,27 @@
           cursor: pointer;
         }
 
-        .text-container {
-          padding: 1rem 1rem 2rem;
+        h3 {
+          cursor: pointer;
+          padding: 1rem 1rem 0rem;
+          color: var(--text-clr);
+        }
+
+        .country-box-details {
+          margin-top: 1rem;
+          padding: 0rem 1rem 2rem;
           color: var(--text-clr);
 
-          h3 {
-            cursor: pointer;
-          }
+          li {
+            font-size: 0.875rem;
+            font-weight: 300;
 
-          .country-box-details {
-            margin-top: 1rem;
+            &:not(:first-child) {
+              margin-top: 0.25rem;
+            }
 
-            li {
-              font-size: 0.875rem;
-              font-weight: 300;
-
-              &:not(:first-child) {
-                margin-top: 0.25rem;
-              }
-
-              strong {
-                font-weight: 600;
-              }
+            strong {
+              font-weight: 600;
             }
           }
         }

@@ -31,22 +31,20 @@ const Country = ({ data }) => {
         alt={data.name.common}
         onClick={() => handleNavigate(data.name.common)}
       />
-      <div className="text-container">
-        <h3 tabIndex="0" onClick={() => handleNavigate(data.name.common)}>
-          {data.name.common}
-        </h3>
-        <ul className="country-box-details">
-          <li>
-            <strong>Population:</strong> {numberWithCommas(data.population)}
-          </li>
-          <li>
-            <strong>Region:</strong> {data.region}
-          </li>
-          <li>
-            <strong>Capital:</strong> {data.capital}
-          </li>
-        </ul>
-      </div>
+      <h3 tabIndex="0" onClick={() => handleNavigate(data.name.common)}>
+        {data.name.common}
+      </h3>
+      <ul className="country-box-details">
+        <li>
+          <strong>Population:</strong> {numberWithCommas(data.population)}
+        </li>
+        <li>
+          <strong>Region:</strong> {data.region}
+        </li>
+        <li>
+          <strong>Capital:</strong> {data.capital}
+        </li>
+      </ul>
     </motion.article>
   );
 };

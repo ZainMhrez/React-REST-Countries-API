@@ -4,10 +4,14 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CountriesContext from "../../Context/CountriesContext";
 
 const OptionsSection = () => {
-  const { filterCountriesByRegion, filterCountriesByName } =
-    useContext(CountriesContext);
+  const {
+    allCountries,
+    setDisplayedCountries,
+    filterCountriesByRegion,
+    filterCountriesByName,
+  } = useContext(CountriesContext);
   const [isExpanded, setIsExpanded] = useState(false);
-  const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+  const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   const handleClick = () => {
     setIsExpanded(!isExpanded);
@@ -18,8 +22,13 @@ const OptionsSection = () => {
   };
 
   const filterByRegion = (e) => {
-    filterCountriesByRegion(e.target.id);
-    setIsExpanded(!isExpanded);
+    if (e.target.id === "All") {
+      setDisplayedCountries(allCountries);
+      setIsExpanded(!isExpanded);
+    } else {
+      filterCountriesByRegion(e.target.id);
+      setIsExpanded(!isExpanded);
+    }
   };
 
   return (
